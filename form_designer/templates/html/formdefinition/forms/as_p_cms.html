@@ -1,10 +1,10 @@
 {% load friendly %}
 
 {% if form_success %}
-        {{ form_success_message }}
+        {{ form_success_message | friendly }}
 {% else %}
         {% if form_error %}
-            {{ form_error_message }}
+            {{ form_error_message | friendly }}
         {% endif %}
     <form name="{{ form_definition.name }}" action="{{ form_definition.action }}" method="{{ form_definition.method }}" enctype="multipart/form-data">
         {% for entry in logs %}
